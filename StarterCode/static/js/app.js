@@ -69,15 +69,15 @@ function buildBarChart(sample)
         //build the bar chart
         //get the yTicks
         let yticks = otu_ids.slice(0, 10).map(id => `OTU ${id}`);
-        let xValues = sample_values.slice=(0, 10);
+        let xValues = sample_values.slice(0, 10);
         let textlabels = otu_labels.slice(0, 10);
         //console.log(xValues);
         //console.log(textlabels);
 
         let barChart = {
-            y: yticks,
-            x: xValues,
-            text: textlabels,
+            y: yticks.reverse(),
+            x: xValues.reverse(),
+            text: textlabels.reverse(),
             type: "bar",
             orientation: "h"
         }
